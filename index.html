@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found - Reunite with Your Belongings</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-search-location"></i> Lost & Found
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/browse.html">Browse Items</a>
+                <a href="pages/report-lost.html">Report Lost</a>
+                <a href="pages/report-found.html">Report Found</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero animate-on-scroll">
+        <div class="floating-shapes-container">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="stats-badge animate-on-scroll">
+            <i class="fas fa-circle" style="font-size: 0.6rem;"></i> Over 500+ Items Reunited
+        </div>
+
+        <h1 class="animate-on-scroll delay-100">Find What’s Yours,<br>Return What Isn’t.</h1>
+        <p class="animate-on-scroll delay-200">The most trusted community platform to report lost items and reconnect
+            with found belongings in your area.</p>
+
+        <!-- Search Bar -->
+        <div class="search-container animate-on-scroll delay-300">
+            <form action="pages/browse.html" method="GET" class="search-bar">
+                <input type="text" name="query" placeholder="What are you looking for? (e.g. Wallet, iPhone, Keys)">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <main>
+        <!-- How It Works Section -->
+        <div class="section-wrapper animate-on-scroll">
+            <h2 class="section-title">How It Works</h2>
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Report an Item</h3>
+                    <p class="feature-text">Lost something? Found something? Fill out a simple form with details and
+                        photos to get started.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Matching</h3>
+                    <p class="feature-text">Our intelligent system automatically searches for potential matches based on
+                        your description and location.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="feature-title">Reunite</h3>
+                    <p class="feature-text">Connect securely with the owner or finder and arrange a meetup to return the
+                        item.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Items Section -->
+        <div class="section-wrapper animate-on-scroll">
+            <h2 class="section-title">Recently Reported</h2>
+            <div id="recent-items-container" class="items-grid">
+                <div class="loader"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="pages/browse.html" class="btn btn-outline"
+                    style="border: 2px solid var(--primary-color); padding: 12px 30px; border-radius: 50px; text-decoration: none; color: var(--primary-color); font-weight: 600; display: inline-block; transition: all 0.3s ease;">
+                    View All Items <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section animate-on-scroll">
+            <h2>Ready to Help?</h2>
+            <p>Join our community today and make someone's day by returning their lost prized possession.</p>
+            <a href="pages/report-found.html" class="btn-white">Report Found Item</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content"
+            style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 20px;">Lost & Found</h3>
+                <p>Connecting people with their lost belongings through technology and community.</p>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 20px;">Quick Links</h3>
+                <div class="footer-links" style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="index.html" style="color: #cbd5e1; text-decoration: none;">Home</a>
+                    <a href="pages/browse.html" style="color: #cbd5e1; text-decoration: none;">Browse</a>
+                    <a href="pages/report-lost.html" style="color: #cbd5e1; text-decoration: none;">Report Lost</a>
+                    <a href="pages/report-found.html" style="color: #cbd5e1; text-decoration: none;">Report Found</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: white; margin-bottom: 20px;">Contact</h3>
+                <p>Email: kuljeetchoure45@gmail.com</p>
+                <div style="margin-top: 20px;">
+                    <i class="fab fa-twitter" style="font-size: 1.5rem; margin-right: 15px; cursor: pointer;"></i>
+                    <i class="fab fa-instagram" style="font-size: 1.5rem; margin-right: 15px; cursor: pointer;"></i>
+                    <i class="fab fa-facebook" style="font-size: 1.5rem; cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright"
+            style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2026 Lost & Found App. Made with <i class="fas fa-heart" style="color: #ec4899;"></i> ME
+                .</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Custom render function for home page to limit items
+        const loadRecentItems = async () => {
+            const container = document.getElementById('recent-items-container');
+            if (!container) return;
+
+            try {
+                // Fetch all items
+                const items = await api.searchItems({});
+                // Slice top 6 (assuming searchItems returns newest first? If not, we might need a sort)
+                // In a real app we'd have a specific /recent endpoint
+                const recentItems = items.slice(0, 3); // Just show top 3 for "Recent"
+
+                container.innerHTML = '';
+                if (recentItems.length === 0) {
+                    container.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No items reported yet.</p>';
+                    return;
+                }
+
+                recentItems.forEach((item, index) => {
+                    // Reuse the render logic manually or ensure main.js can handle it. 
+                    // Since main.js renderItems might rely on specific DOM IDs, we'll quickly inline build here for maximum control
+                    const card = document.createElement('div');
+                    card.className = 'item-card animate-on-scroll';
+                    card.style.transitionDelay = `${index * 100}ms`;
+
+                    const imageUrl = item.imageUrl ? `http://localhost:3000${item.imageUrl}` : 'frontend/images/placeholder.png'; // Fix path for home
+                    // Wait, this is index.html in root. Images are in frontend/images or uploads. 
+                    // item.imageUrl comes as /uploads/filename.ext. So http://localhost:3000/uploads/... is correct for src.
+
+                    let imageHTML = '';
+                    if (item.imageUrl) {
+                        imageHTML = `<img src="http://localhost:3000${item.imageUrl}" alt="${item.title}" class="item-image">`;
+                    } else {
+                        imageHTML = `<div class="item-image" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e2e8f0, #cbd5e1); color: #94a3b8; font-size: 3rem;"><i class="fas fa-box-open"></i></div>`;
+                    }
+
+                    // Adjust URL for item-details since index.html is in root
+                    const detailsUrl = `pages/item-details.html?id=${item.id}&type=${item.type}`;
+
+                    card.innerHTML = `
+                        <a href="${detailsUrl}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                            <span class="item-badge ${item.type === 'lost' ? 'badge-lost' : 'badge-found'}">${item.type}</span>
+                            <div class="item-image-wrapper">
+                                ${imageHTML}
+                                <div class="item-overlay"></div>
+                            </div>
+                            <div class="item-content">
+                                <h3 class="item-title">${item.title}</h3>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-map-marker-alt"></i> ${item.location}</p>
+                            </div>
+                            <div class="btn-floating"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    `;
+                    container.appendChild(card);
+                    // Force visibility since we might be scrolled down already or simple overlap
+                    setTimeout(() => card.classList.add('visible'), 100);
+                });
+
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = '<p>Could not load recent items.</p>';
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', loadRecentItems);
+    </script>
+</body>
+
+</html>

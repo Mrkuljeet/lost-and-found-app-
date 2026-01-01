@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Items - Lost & Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .filters-wrapper {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+      animation: slideUpFade 0.6s ease forwards 0.1s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .filter-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      align-items: end;
+    }
+
+    .filter-item {
+      position: relative;
+    }
+
+    .filter-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-left: 5px;
+    }
+
+    .filter-input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 2px solid #e2e8f0;
+      background: rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+      outline: none;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .filter-input:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+      background: #fff;
+    }
+
+    .btn-filter {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-filter:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(79, 70, 229, 0.4);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1e293b, #475569);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .results-count {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      border: 2px dashed #cbd5e1;
+    }
+
+    @keyframes slideUpFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="logo">
+        <i class="fas fa-search-location"></i> Lost & Found
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="browse.html" class="active">Browse Items</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-header">
+      <h2>Explore Items</h2>
+      <p class="results-count">Search specifically or browse everything.</p>
+    </div>
+
+    <div class="filters-wrapper">
+      <form id="search-form" class="filter-form">
+        <div class="filter-item">
+          <label for="query" class="filter-label"><i class="fas fa-search"></i> Keyword</label>
+          <input type="text" id="query" name="query" class="filter-input" placeholder="What are you looking for?">
+        </div>
+        <div class="filter-item">
+          <label for="type" class="filter-label"><i class="fas fa-filter"></i> Type</label>
+          <select id="type" name="type" class="filter-input">
+            <option value="">All Types</option>
+            <option value="lost">Lost Items</option>
+            <option value="found">Found Items</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="category" class="filter-label"><i class="fas fa-tags"></i> Category</label>
+          <select id="category" name="category" class="filter-input">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Documents">Documents</option>
+            <option value="Jewelry">Jewelry</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Keys">Keys</option>
+            <option value="Wallet">Wallet</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="location" class="filter-label"><i class="fas fa-map-marker-alt"></i> Location</label>
+          <input type="text" id="location" name="location" class="filter-input" placeholder="City or Area">
+        </div>
+        <div class="filter-item">
+          <button type="submit" class="btn-filter" style="width: 100%;">
+            <i class="fas fa-sync-alt"></i> Update Results
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="items-container" class="items-grid">
+      <div class="loader"></div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+
+</html>

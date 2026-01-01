@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details - Lost & Found</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .details-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: var(--white);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .details-image {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+
+    .details-image img {
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+    }
+
+    .details-info h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--dark-text);
+    }
+
+    .info-group {
+      margin-bottom: 20px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: var(--secondary-color);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-box {
+      background: #f1f8ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+      border: 1px solid #cce5ff;
+    }
+
+    .matches-section {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .details-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="logo">
+        <i class="fas fa-search-location"></i> Lost & Found
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="loading" class="loader"></div>
+
+    <div id="details-content" style="display: none;">
+      <div class="details-container">
+        <div class="details-image" id="item-image">
+          <!-- Image injected here -->
+        </div>
+        <div class="details-info">
+          <span id="item-badge" class="item-badge"></span>
+          <h1 id="item-title"></h1>
+
+          <div class="info-group">
+            <span class="info-label">Description</span>
+            <p id="item-description"></p>
+          </div>
+
+          <div class="info-group">
+            <span class="info-label">Category</span>
+            <p id="item-category"></p>
+          </div>
+
+          <div class="info-group">
+            <span class="info-label">Location</span>
+            <p id="item-location"></p>
+            <div id="map"></div>
+          </div>
+
+          <div class="info-group">
+            <span class="info-label">Date</span>
+            <p id="item-date"></p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-user"></i> <span id="contact-name"></span></p>
+            <p><i class="fas fa-envelope"></i> <span id="contact-email"></span></p>
+            <p><i class="fas fa-phone"></i> <span id="contact-phone"></span></p>
+          </div>
+
+          <button id="delete-btn" class="btn btn-outline"
+            style="margin-top: 20px; border-color: var(--danger-color); color: var(--danger-color);">
+            <i class="fas fa-trash"></i> Delete Item
+          </button>
+        </div>
+      </div>
+
+      <div class="matches-section">
+        <h2 class="section-title">Potential Matches</h2>
+        <div id="matches-grid" class="items-grid">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We are dedicated to helping people find their lost belongings through our community-driven platform.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="report-lost.html">Report Lost</a>
+          <a href="report-found.html">Report Found</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: support@lostandfound.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Lost & Found App. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/details.js"></script>
+</body>
+
+</html>

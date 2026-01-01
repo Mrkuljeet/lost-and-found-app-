@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Found Item - Lost & Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="logo">
+        <i class="fas fa-search-location"></i> Lost & Found
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html" class="active">Report Found</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="form-page-container">
+    <div class="glass-form found-accent" style="border-top: 5px solid #10b981;"> <!-- Green accent for Found -->
+      <h2
+        style="background: linear-gradient(135deg, #10b981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Report Found Item</h2>
+      <p class="form-subtitle">Good Samaritan! Help us return this item to its owner.</p>
+
+      <form id="report-found-form">
+        <!-- Item Details -->
+        <div class="form-group">
+          <input type="text" id="title" name="title" class="form-input" placeholder=" " required>
+          <label for="title" class="form-label">Item Name (e.g. Blue Backpack)</label>
+        </div>
+
+        <div class="form-group">
+          <select id="category" name="category" class="form-input" required style="padding-top: 16px;">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Documents">Documents</option>
+            <option value="Jewelry">Jewelry</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="location" name="location" class="form-input" placeholder=" " required>
+          <label for="location" class="form-label">Location Found</label>
+        </div>
+
+        <div class="form-group">
+          <input type="date" id="date" name="date" class="form-input" required>
+          <label for="date" class="form-label"
+            style="top: -10px; left: 15px; font-size: 0.85rem; background: #fff; color: #10b981;">Date Found</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="storageLocation" name="storageLocation" class="form-input" placeholder=" ">
+          <label for="storageLocation" class="form-label">Current Storage (e.g., Reception, With me)</label>
+        </div>
+
+        <div class="form-group">
+          <textarea id="description" name="description" class="form-input" placeholder=" "></textarea>
+          <label for="description" class="form-label">Description</label>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="form-group">
+          <div class="upload-zone" id="drop-zone">
+            <input type="file" id="image" name="image" accept="image/*" style="display: none;">
+            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+            <p style="font-weight: 500; color: var(--text-main);">Click or Drag & Drop Image Here</p>
+            <img id="image-preview" class="preview-image" alt="Preview">
+          </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 30px 0;">
+
+        <!-- Contact Info -->
+        <p style="margin-bottom: 20px; font-weight: 600; color: var(--secondary-color);">Contact Information</p>
+
+        <div class="form-group">
+          <input type="text" id="contactName" name="contactName" class="form-input" placeholder=" " required>
+          <label for="contactName" class="form-label">Your Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="contactEmail" name="contactEmail" class="form-input" placeholder=" " required>
+          <label for="contactEmail" class="form-label">Email Address</label>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" id="contactPhone" name="contactPhone" class="form-input" placeholder=" ">
+          <label for="contactPhone" class="form-label">Phone Number (Optional)</label>
+        </div>
+
+        <button type="submit" class="btn-submit"
+          style="background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);">
+          <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Submit Report
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/form-handler.js"></script>
+</body>
+
+</html>
